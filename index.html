@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- #AEABA6 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="assets/library/bootstrap/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="assets/library/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/library/fontawesome/css/all.css"> 
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    <script src="components/servicios.js"></script>
+    <script src="components/nosotros.js"></script>
+    <script src="components/inicio.js"></script>
+    <script src="components/contacto.js"></script>
+    <title>AGE</title>
+</head>
+<body >
+    <div id="app">
+        <div class="container-fluid">
+            <div class="col-md-12" id="logo">         
+                <div class="col mt-2" style="justify-content: center; align-items: center; display:flex ">
+                    <img src="assets/image/logo4.PNG" alt="" width="20%">
+                </div>
+            </div>     
+            <hr>
+            <section >
+                <nav class="navbar navbar-expand-lg  mt-3">
+                    <div class="container-fluid" >
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent"  style="justify-content: center; align-items: center;">
+                            <ul class="navbar-nav  mb-2 mb-lg-0" >
+                                <li class="nav-item border-end">
+                                    <a class="nav-link active" v-on:click="mostrar(1)" tabindex="-1"  ><strong><i class="fas fa-home"></i> INICIO</strong> </a>
+                                </li>
+                                <li  class="nav-item border-end">
+                                    <a class="nav-link" v-on:click="mostrar(2)" tabindex="-1"  ><strong><i class="fas fa-building"></i> NOSOTROS</strong></a>
+                                </li>
+                                <li  class="nav-item border-end">
+                                    <a class="nav-link" v-on:click="mostrar(3)" tabindex="-1"  ><strong><i class="fas fa-cogs"></i> SERVICIOS</strong></a>
+                                </li>
+                                <li  class="nav-item border-end">
+                                    <a class="nav-link" v-on:click="mostrar(4)" tabindex="-1" ><strong><i class="fas fa-sms"></i> CONTACTO</strong></a>
+                                </li>
+                            </ul>
+                        </div>             
+                    </div>
+                </nav>
+            </section>
+            <div style="background-color:  #3E4095;">
+                <div style="margin: 2%">
+                    &nbsp;&nbsp;
+                </div>           
+            </div>
+            <!--Fin Menu-->
+
+            <seccion-inicio v-show="valor==1"></seccion-inicio>
+            <seccion-nosotros  v-show="valor==2"></seccion-nosotros>
+            <seccion-servicios  v-show="valor==3"></seccion-servicios>
+            <seccion-contacto v-show="valor==4"></seccion-contacto>
+        
+
+            <section>
+                <div class="row justify-content-center" style="font-style: italic; margin-top: 2%;border-width: 2%; padding: 3% 5% 0 5%; background-color: #3E4095; color:white">
+                    <div class="col-md-4">
+                        <div class="row m-2 border-bottom">
+                            <h6>Estamos ubicados en: </h6>
+                            <span style="font-size: 10pt;" ><i class="fas fa-route"></i>  Calle 71 B No. 87-12 </span> <br>
+                            <span  class="mb-2" style="font-size: 10pt;"><i class="fas fa-map-marker-alt"></i> Zarzamora, Bogotá, D.C., Colombia </span>
+                        </div>
+                        <div class="row m-2 border-bottom">
+                            <h6>Llamenos a:</h6>
+                            <span style="font-size: 10pt;"><i class="fas fa-mobile-alt"></i> 315 300 2533 </span>  
+                            <span class="mb-2" style="font-size: 10pt;"><i class="fas fa-mobile-alt" ></i> 312 851 3547 </span>
+                        </div> 
+                        <div class="row m-2 border-bottom"> 
+                        <h6>Escribanos a:</h6>
+                            <span class="mb-2" style="font-size: 10pt;"><i class="fas fa-at"></i> ageasesoriasyconsultorias@hotmail.com </span> <br>
+                        </div> 
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+            </section>
+            <footer>
+                <div class="row" style="background-color: black; color:white">
+                    <div class="col-md-12 mt-2 mb-2  text-center">
+                        Copyright <i class="far fa-copyright"></i> <span style="color: #1DAEDF">Tecnoma</span>
+                    </div>      
+                </div>
+            </footer> 
+            <!--Fin Footer -->
+
+        </div>
+    </div>
+    <script src="components/Vue.js"></script>
+    <script src="assets/library/jquery/jquery.min.js"></script>
+
+</body>
+</html>

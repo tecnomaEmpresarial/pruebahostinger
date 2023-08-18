@@ -1,0 +1,51 @@
+#caracteristicas{
+    background:  linear-gradient(rgba(3, 3, 3, 0.4), rgba(3, 3, 3, 0.4)), url("../image/asesoria4.jpg") fixed center center;
+    background-size: cover;
+    padding: 20px 0;
+    color:white;
+}
+
+#servicios .nav .nav-item .nav-link{
+    background-color: white;
+    color: black;
+}
+
+#servicios .nav .nav-item :hover{
+    background-color: #4A67C4;
+    color: white;
+}
+
+#servicios .nav .nav-item :focus{
+    background-color: #4A67C4;
+    color: white;
+}
+
+a.nav-link{
+    color:black;
+}
+
+a.nav-link :hover{
+    color: #4A67C4;
+}
+
+a.nav-link :focus{
+    color: #4A67C4;
+}
+@media screen and (min-width: 300px) and (max-width: 400px) { 
+    #metodologia{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) { 
+    #metodologia{
+        /* margin-top: 5%; */
+     }
+}
+
+@media screen and (min-width: 1000px){ 
+    #metodologia{
+       font-size: 25pt;
+       /* margin-top: -42%; */
+    }
+}
